@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metcastify — Weather that explains itself</title>
+<meta name="description" content="Metcastify is a mobile weather app that explains the weather instead of just displaying it — forecasts, radar, alerts, planners, and a conversational assistant.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta property="og:title" content="Metcastify — Weather that explains itself">
+<meta property="og:description" content="Forecasts, radar, alerts, planners, and a conversational assistant that tells you what the weather means.">
+<meta property="og:image" content="icon.png">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0b1026; color: #dfe6f2; line-height: 1.6;
+  }
+  .hero {
+    position: relative; overflow: hidden; text-align: center;
+    padding: 88px 24px 72px;
+    background: linear-gradient(135deg, #00c2f5 0%, #0aa0f0 34%, #123a8e 62%, #0b1026 100%);
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      radial-gradient(2px 2px at 78% 22%, #fff9 50%, transparent 51%),
+      radial-gradient(2px 2px at 88% 42%, #fff7 50%, transparent 51%),
+      radial-gradient(3px 3px at 70% 64%, #fff8 50%, transparent 51%),
+      radial-gradient(2px 2px at 92% 74%, #fff6 50%, transparent 51%),
+      radial-gradient(2px 2px at 60% 84%, #fff5 50%, transparent 51%);
+  }
+  .hero img.appicon {
+    width: 132px; height: 132px; border-radius: 30px;
+    box-shadow: 0 18px 44px #0008; position: relative;
+  }
+  .hero h1 { font-size: 44px; margin-top: 22px; letter-spacing: -0.5px; color: #fff; position: relative; }
+  .hero .tag { font-size: 21px; color: #eaf4ff; margin-top: 8px; position: relative; }
+  .hero .sub { max-width: 560px; margin: 14px auto 0; color: #cfe2f7; font-size: 16px; position: relative; }
+  .badges { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
+  .badge {
+    display: inline-block; padding: 12px 22px; border-radius: 12px;
+    border: 1px solid #ffffff55; color: #fff; text-decoration: none; font-size: 15px;
+    background: #ffffff14; backdrop-filter: blur(4px);
+  }
+  .badge b { display: block; font-size: 16px; }
+  .badge span { font-size: 12px; opacity: 0.8; }
+  main { max-width: 880px; margin: 0 auto; padding: 64px 24px; }
+  h2 { text-align: center; font-size: 28px; color: #fff; margin-bottom: 36px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .card {
+    background: #131a36; border: 1px solid #232e55; border-radius: 16px; padding: 22px;
+  }
+  .card .em { font-size: 26px; line-height: 1; }
+  .card h3 { color: #fff; font-size: 17px; margin: 10px 0 6px; }
+  .card p { font-size: 14.5px; color: #aebad2; }
+  footer {
+    border-top: 1px solid #1c2547; padding: 36px 24px 48px; text-align: center;
+    color: #8d9bb5; font-size: 14px;
+  }
+  footer a { color: #7db4f5; text-decoration: none; }
+  footer .links { margin-bottom: 10px; display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <img class="appicon" src="icon.png" alt="Metcastify app icon">
+  <h1>Metcastify</h1>
+  <p class="tag">Weather that explains itself</p>
+  <p class="sub">Most weather apps show you numbers. Metcastify tells you what they mean —
+  when the rain actually starts, whether tonight is a good night to see stars,
+  and why tomorrow feels different from today.</p>
+  <div class="badges">
+    <a class="badge" href="#"><span>Coming soon to the</span><b>App Store</b></a>
+    <a class="badge" href="#"><span>Coming soon to</span><b>Google Play</b></a>
+  </div>
+</section>
+
+<main>
+  <h2>What it does</h2>
+  <div class="grid">
+    <div class="card"><div class="em">💬</div><h3>Explains, not just displays</h3>
+      <p>Plain-language summaries of what the forecast means for your day, powered by an on-device engine that works offline.</p></div>
+    <div class="card"><div class="em">🌧️</div><h3>Live radar</h3>
+      <p>Animated precipitation radar and satellite layers with a scrubbing timeline, right where you are.</p></div>
+    <div class="card"><div class="em">⚠️</div><h3>Severe weather alerts</h3>
+      <p>Official National Weather Service watches and warnings, plus rain, lightning and UV heads-ups as notifications.</p></div>
+    <div class="card"><div class="em">📅</div><h3>Planners</h3>
+      <p>Hour-by-hour and ten-day planning views that highlight the windows that matter — commutes, runs, stargazing.</p></div>
+    <div class="card"><div class="em">🌌</div><h3>Sky &amp; space</h3>
+      <p>Sunrise and moon phases, aurora chances from NOAA space weather, and even where the ISS is right now.</p></div>
+    <div class="card"><div class="em">🌗</div><h3>Day &amp; night, beautifully</h3>
+      <p>An interface that shifts with the sky outside, from bright afternoons to starry nights.</p></div>
+  </div>
+</main>
+
+<footer>
+  <div class="links">
+    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:jing@loveios.net">Contact</a>
+  </div>
+  <p>© 2026 Jing Moreno · Weather data from Apple Weather, Open-Meteo, and the National Weather Service.</p>
+</footer>
+
+</body>
+</html>

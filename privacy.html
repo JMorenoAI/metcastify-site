@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metcastify — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; padding: 32px 20px 64px; max-width: 720px;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #fff; color: #1c2733;
+  }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  h3 { font-size: 16px; margin: 24px 0 6px; }
+  p, li { margin: 8px 0; }
+  ul { padding-left: 22px; }
+  a { color: #1668c7; }
+  .meta { color: #5b6a7a; font-size: 14px; margin-bottom: 28px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14.5px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #d8dee6; vertical-align: top; }
+  th { font-weight: 600; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #0b1026; color: #dfe6f2; }
+    a { color: #7db4f5; }
+    .meta { color: #93a1b5; }
+    th, td { border-bottom-color: #2a3550; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Metcastify Privacy Policy</h1>
+<p class="meta">Effective date: July 13, 2026</p>
+
+<p>Metcastify ("the app", "we") is a weather app published by Jing Moreno. This policy explains what
+information the app handles, where it goes, and the choices you have. The short version: Metcastify has
+no accounts and no server of its own that stores your data. Your location is used to fetch weather for
+where you are, your preferences stay on your device, and advertising is provided by Google AdMob under
+the consent choices you make.</p>
+
+<h2>Information we handle, and why</h2>
+<table>
+  <tr><th>Data</th><th>Purpose</th><th>Where it goes</th></tr>
+  <tr>
+    <td>Precise or approximate location</td>
+    <td>Showing local weather, forecasts, radar, and alerts</td>
+    <td>Sent as coordinates to the weather providers listed below; not stored by us</td>
+  </tr>
+  <tr>
+    <td>Approximate location from IP address</td>
+    <td>A fallback starting location when you don't grant location access</td>
+    <td>GeoJS (a geolocation lookup service)</td>
+  </tr>
+  <tr>
+    <td>Settings and saved places</td>
+    <td>Units, appearance, saved locations, notification and assistant preferences</td>
+    <td>Stored only on your device; deleted when you delete the app</td>
+  </tr>
+  <tr>
+    <td>Device identifiers and ad interaction data</td>
+    <td>Serving and measuring ads</td>
+    <td>Google AdMob and its advertising partners (see Advertising below)</td>
+  </tr>
+  <tr>
+    <td>Questions you ask the optional AI assistant</td>
+    <td>Generating conversational weather answers</td>
+    <td>Only if you opt in: sent to Puter with a brief weather summary (see AI assistant below)</td>
+  </tr>
+</table>
+
+<p>Weather notifications (rain, lightning, UV, and alert heads-ups) are scheduled locally on your
+device; no notification data is sent to us.</p>
+
+<h2>Location</h2>
+<p>Metcastify requests location access to show conditions where you are. Coordinates are sent to the
+weather services below to retrieve forecasts and are not used to identify you, sold, or stored by us.
+You can decline location access and search for places by name instead; the app then estimates a
+starting location from your IP address. You can change location permissions at any time in your device
+settings.</p>
+
+<h2>Advertising (Google AdMob)</h2>
+<p>Metcastify shows ads served by Google AdMob. AdMob may collect device identifiers (such as the iOS
+advertising identifier or Android advertising ID), IP address, coarse location, and information about
+your interactions with ads, as described in
+<a href="https://policies.google.com/technologies/ads">Google's advertising policy</a> and
+<a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
+<ul>
+  <li><strong>Consent in the EEA, UK, and Switzerland:</strong> before ads are shown you will see a
+  consent prompt. If you decline personalized ads, ads are shown without personalization. You can
+  change your choice from the app's settings at any time.</li>
+  <li><strong>iOS:</strong> personalized ads are only enabled if you allow tracking in the App Tracking
+  Transparency prompt. You can change this under Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
+  <li><strong>Android:</strong> you can reset your advertising ID or opt out of ad personalization
+  under Settings &gt; Google &gt; Ads.</li>
+</ul>
+
+<h2>Optional AI assistant</h2>
+<p>The Ask feature answers questions using an on-device rules engine by default; nothing leaves your
+phone. You may optionally switch to the Puter AI engine in Settings. If you do, you sign in to a Puter
+account, and your questions along with a compact summary of the current forecast are sent to
+<a href="https://puter.com/privacy">Puter</a> to generate answers. AI usage is billed to your Puter
+account, not to Metcastify. We never send your questions anywhere unless you have opted in.</p>
+
+<h2>Weather data providers</h2>
+<p>To display weather, the app requests data from these services. Requests include the coordinates
+being viewed and standard connection information (such as IP address), governed by each provider's own
+policy:</p>
+<ul>
+  <li><a href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Weather (WeatherKit)</a> — headline forecasts on iOS</li>
+  <li><a href="https://open-meteo.com/en/terms">Open-Meteo</a> — forecasts, air quality, and geocoding</li>
+  <li><a href="https://www.weather.gov/privacy">National Weather Service (weather.gov)</a> — United States alerts and forecasts</li>
+  <li><a href="https://www.noaa.gov/protecting-your-privacy">NOAA Space Weather Prediction Center</a> — aurora and space-weather data</li>
+  <li><a href="https://www.rainviewer.com/privacy.html">RainViewer</a> and LibreWXR — radar imagery</li>
+  <li><a href="https://carto.com/privacy">CARTO</a> / <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap</a> — map tiles</li>
+  <li><a href="https://wheretheiss.at">Where The ISS At</a> — International Space Station position (Explore section)</li>
+</ul>
+
+<h2>What we don't do</h2>
+<ul>
+  <li>No accounts — the app works without registration, and we cannot identify you.</li>
+  <li>No Metcastify servers store your personal data.</li>
+  <li>We do not sell personal information, and we do not use third-party analytics SDKs.</li>
+</ul>
+
+<h2>Data retention and deletion</h2>
+<p>Everything the app saves (preferences, saved places, notification settings) lives on your device and
+is removed when you delete the app. Data handled by third parties (Google AdMob, Puter, weather
+providers) is retained under their own policies; the links above describe your options with each.</p>
+
+<h2>Children</h2>
+<p>Metcastify is not directed at children under 13, and we do not knowingly collect personal
+information from children.</p>
+
+<h2>Your rights</h2>
+<p>Depending on where you live (for example under the GDPR, UK GDPR, or California's CCPA/CPRA), you
+may have rights to access, correct, delete, or restrict the processing of your personal data, and to
+withdraw consent. Because Metcastify stores no personal data on its own servers, most of these rights
+are exercised directly on your device (permissions, ad settings, deleting the app) or with the
+third-party services above. For anything else, contact us and we will help.</p>
+
+<h2>Security</h2>
+<p>All network requests the app makes use HTTPS encryption in transit.</p>
+
+<h2>Changes to this policy</h2>
+<p>If we change this policy — for example when adding new features or providers — we will update this
+page and the effective date above.</p>
+
+<h2>Contact</h2>
+<p>Questions or requests: <a href="mailto:jing@loveios.net">jing@loveios.net</a></p>
+
+</body>
+</html>
