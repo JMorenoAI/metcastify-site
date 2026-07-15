@@ -9,64 +9,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sky-1:#33b9f2;
-  --sky-2:#8fe0ff;
-  --sky-3:#ffd98a;
-  --cream:#fbf8f2;
-  --paper:#ffffff;
-  --ink:#122036;
-  --ink-2:#57667e;
-  --ink-3:#8b97ab;
-  --line:#e6ecf5;
-  --blue:#2f6fe4;
-  --blue-deep:#1d4fb8;
-  --orange:#ff8a3d;
-  --night-1:#0a1428;
-  --night-2:#132548;
-  --radius-lg:28px;
-  --radius-md:18px;
-  --radius-sm:12px;
-  --disp:'Space Grotesk',sans-serif;
-  --body:'Inter',sans-serif;
-  --mono:'JetBrains Mono',monospace;
+  --sky-1:#33b9f2;--sky-2:#8fe0ff;--sky-3:#ffd98a;
+  --cream:#fbf8f2;--paper:#ffffff;--ink:#122036;--ink-2:#57667e;--ink-3:#8b97ab;--line:#e6ecf5;
+  --blue:#2f6fe4;--blue-deep:#1d4fb8;--orange:#ff8a3d;
+  --radius-lg:28px;--radius-md:18px;--radius-sm:12px;
+  --disp:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--body);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 img,svg{display:block}
-.wrap{max-width:1180px;margin:0 auto;padding:0 6vw}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 
-/* ---------- NAV ---------- */
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
   padding:18px 6vw;backdrop-filter:blur(16px);background:#fbf8f2cc;border-bottom:1px solid #12203612}
-.brand{display:flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:-.02em;text-decoration:none}
-.brand-mark{width:26px;height:26px;border-radius:8px;background:linear-gradient(155deg,var(--sky-1),var(--sky-3));flex:none;position:relative}
+.brand{display:flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:-.02em}
+.brand-mark{width:26px;height:26px;border-radius:8px;background:linear-gradient(155deg,var(--sky-1),var(--sky-3));position:relative}
 .brand-mark::after{content:"";position:absolute;inset:5px;border-radius:50%;background:#fff9;filter:blur(1px)}
-.nav-links{display:flex;gap:30px;font-size:14.5px;font-weight:500;color:var(--ink-2)}
-.nav-links a{text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{font-size:14px;font-weight:600;background:var(--ink);color:#fff;padding:10px 18px;border-radius:99px;text-decoration:none;transition:transform .2s}
+.nav-cta{font-size:14px;font-weight:600;background:var(--ink);color:#fff;padding:10px 18px;border-radius:99px;transition:transform .2s}
 .nav-cta:hover{transform:translateY(-1px)}
-@media(max-width:820px){.nav-links{display:none}}
 
-/* ---------- HERO ---------- */
-.hero{padding:150px 6vw 100px;position:relative;overflow:hidden;background:
-  radial-gradient(1100px 600px at 82% -10%, #ffe9be80, transparent 60%),
-  radial-gradient(900px 500px at -10% 10%, #bfeeff70, transparent 55%),
-  var(--cream)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;max-width:1180px;margin:0 auto}
+/* HERO */
+.hero{padding:140px 6vw 100px;position:relative;overflow:hidden;
+  background:radial-gradient(1100px 600px at 82% -10%,#ffe9be80,transparent 60%),radial-gradient(900px 500px at -10% 10%,#bfeeff70,transparent 55%),var(--cream)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;
   text-transform:uppercase;color:var(--blue-deep);background:#2f6fe412;border:1px solid #2f6fe424;padding:7px 13px;border-radius:99px}
 .eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--orange)}
-h1{font-family:var(--disp);font-weight:700;font-size:clamp(38px,5.4vw,62px);line-height:1.02;letter-spacing:-.03em;margin:22px 0 20px}
-h1 em{font-style:normal;background:linear-gradient(100deg,var(--blue) 10%,#22b8cf 60%,var(--orange) 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-sub{max-width:490px;font-size:18.5px;line-height:1.55;color:var(--ink-2)}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(36px,5.2vw,60px);line-height:1.02;letter-spacing:-.03em;margin:22px 0 20px}
+h1 em{font-style:normal;background:linear-gradient(100deg,var(--blue) 10%,#22b8cf 60%,var(--orange) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{max-width:480px;font-size:18px;line-height:1.55;color:var(--ink-2)}
 .hero-btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-.store-badge{display:flex;align-items:center;gap:10px;padding:11px 20px 11px 16px;border-radius:14px;text-decoration:none;
-  font-family:var(--body);transition:transform .2s,box-shadow .2s}
+.store-badge{display:flex;align-items:center;gap:10px;padding:11px 20px 11px 16px;border-radius:14px;font-family:var(--body);transition:transform .2s,box-shadow .2s}
 .store-badge.dark{background:var(--ink);color:#fff}
 .store-badge.dark:hover{transform:translateY(-2px);box-shadow:0 12px 26px #12203633}
 .store-badge.outline{border:1.5px solid #12203630;color:var(--ink)}
@@ -74,21 +49,15 @@ h1 em{font-style:normal;background:linear-gradient(100deg,var(--blue) 10%,#22b8c
 .store-badge .st{display:flex;flex-direction:column;line-height:1.15}
 .store-badge .st small{font-size:10.5px;opacity:.75;letter-spacing:.02em}
 .store-badge .st strong{font-size:15px;font-weight:600}
-.hero-trust{margin-top:30px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-3)}
-.trust-sources{display:flex;gap:6px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px}
-.trust-sources span{background:#12203608;border:1px solid #1220360f;padding:3px 8px;border-radius:6px}
 
-/* ---------- PHONE MOCK ---------- */
-.phone-stage{position:relative;display:flex;justify-content:center}
-.phone{width:290px;height:592px;border-radius:46px;background:#0c1220;padding:12px;box-shadow:0 40px 90px -20px #12203645,0 10px 30px -10px #12203622;
-  position:relative;animation:float 7s ease-in-out infinite}
+/* PHONE */
+.phone-stage{display:flex;justify-content:center}
+.phone{width:280px;height:572px;border-radius:46px;background:#0c1220;padding:12px;
+  box-shadow:0 40px 90px -20px #12203645,0 10px 30px -10px #12203622;position:relative;animation:float 7s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.phone::before{content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);width:90px;height:22px;background:#0c1220;
-  border-radius:0 0 16px 16px;z-index:5}
-.screen{width:100%;height:100%;border-radius:34px;overflow:hidden;position:relative;background:linear-gradient(190deg,var(--sky-1) 0%,var(--sky-2) 45%,var(--sky-3) 100%)}
-.screen-topbar{padding:34px 18px 8px;text-align:center;font-family:var(--body);font-weight:600;font-size:13px;color:var(--ink)}
-
-/* Ask-screen hero mock */
+.phone::before{content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);width:90px;height:22px;background:#0c1220;border-radius:0 0 16px 16px;z-index:5}
+.screen{width:100%;height:100%;border-radius:34px;overflow:hidden;background:linear-gradient(190deg,var(--sky-1),var(--sky-2) 45%,var(--sky-3))}
+.screen-topbar{padding:34px 18px 8px;text-align:center;font-weight:600;font-size:13px;color:var(--ink)}
 .ask-screen{display:flex;flex-direction:column;height:100%}
 .ask-body{flex:1;padding:8px 14px 14px;display:flex;flex-direction:column;gap:9px;overflow:hidden}
 .bubble{max-width:82%;padding:10px 13px;border-radius:16px;font-size:12.5px;line-height:1.4;opacity:0;transform:translateY(6px);animation:pop .4s ease forwards}
@@ -100,120 +69,23 @@ h1 em{font-style:normal;background:linear-gradient(100deg,var(--blue) 10%,#22b8c
 .typing-dots span:nth-child(2){animation-delay:.15s}
 .typing-dots span:nth-child(3){animation-delay:.3s}
 @keyframes bounce{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
-.ask-input{margin:0 14px 16px;background:#ffffffee;border-radius:99px;padding:11px 15px;font-size:11.5px;color:var(--ink-3);
-  display:flex;justify-content:space-between;align-items:center}
+.ask-input{margin:0 14px 16px;background:#ffffffee;border-radius:99px;padding:11px 15px;font-size:11.5px;color:var(--ink-3);display:flex;justify-content:space-between;align-items:center}
 .ask-input .send{width:20px;height:20px;border-radius:50%;background:var(--blue);flex:none}
 
-/* ---------- SOURCE STRIP ---------- */
-.source-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 6vw;background:var(--paper)}
-.source-strip .wrap{display:flex;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap}
-.source-strip .label{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
-.source-strip .chip{font-family:var(--mono);font-size:13px;color:var(--ink-2);font-weight:500}
-
-/* ---------- WHY SECTION ---------- */
-.why{padding:110px 6vw 90px;text-align:center}
-.why h2{font-family:var(--disp);font-size:clamp(28px,3.4vw,40px);font-weight:600;letter-spacing:-.02em;max-width:760px;margin:0 auto 20px}
-.why p{max-width:600px;margin:0 auto;color:var(--ink-2);font-size:17px;line-height:1.6}
-
-/* ---------- FEATURES ---------- */
-.features{padding:0 6vw 110px}
-.section-head{max-width:1180px;margin:0 auto 46px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
-.section-head h2{font-family:var(--disp);font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:-.02em}
-.section-head p{color:var(--ink-2);max-width:380px;font-size:15.5px;line-height:1.5}
-.grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+/* FEATURES */
+.features{padding:100px 6vw}
+.features-head{text-align:center;max-width:640px;margin:0 auto 50px}
+.features-head h2{font-family:var(--disp);font-size:clamp(26px,3.2vw,38px);font-weight:600;letter-spacing:-.02em;margin-bottom:14px}
+.features-head p{color:var(--ink-2);font-size:17px;line-height:1.6}
+.grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-md);padding:28px;transition:transform .25s,box-shadow .25s}
 .card:hover{transform:translateY(-6px);box-shadow:0 22px 40px -18px #12203630}
 .card-icon{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .card h3{font-family:var(--disp);font-size:18px;font-weight:600;margin-bottom:9px;letter-spacing:-.01em}
 .card p{color:var(--ink-2);font-size:14.5px;line-height:1.55}
-.ic-1{background:#2f6fe41a}.ic-2{background:#22b8cf1a}.ic-3{background:#ff8a3d1a}
-.ic-4{background:#7c5cff1a}.ic-5{background:#ffcf5c33}.ic-6{background:#12203612}
+.ic-1{background:#2f6fe41a}.ic-2{background:#22b8cf1a}.ic-3{background:#ff8a3d1a}.ic-4{background:#7c5cff1a}.ic-5{background:#ffcf5c33}.ic-6{background:#12203612}
 
-/* ---------- EXPLORE SHOWCASE ---------- */
-.explore-sec{padding:0 6vw 110px}
-.explore-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
-.explore-copy .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:14px;display:block}
-.explore-copy h2{font-family:var(--disp);font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:-.02em;margin-bottom:16px}
-.explore-copy p{color:var(--ink-2);font-size:16px;line-height:1.6;margin-bottom:26px}
-.explore-list{display:flex;flex-direction:column;gap:10px}
-.explore-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--ink-2)}
-.explore-list .dot{width:7px;height:7px;border-radius:50%;background:var(--orange);margin-top:7px;flex:none}
-.explore-list strong{color:var(--ink)}
-
-.explore-panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px;box-shadow:0 30px 60px -30px #12203635}
-.ep-group-label{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:16px 4px 8px}
-.ep-group-label:first-child{margin-top:0}
-.ep-row{display:flex;align-items:center;justify-content:space-between;padding:13px 12px;border-radius:14px;transition:background .2s}
-.ep-row:hover{background:#12203608}
-.ep-left{display:flex;align-items:center;gap:12px}
-.ep-ic{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none}
-.ep-title{font-size:14.5px;font-weight:600}
-.ep-right{text-align:right}
-.ep-right small{display:block;font-size:10.5px;color:var(--ink-3);font-family:var(--mono)}
-.ep-right strong{font-size:13.5px;font-family:var(--mono);color:var(--ink)}
-
-/* ---------- SIGNATURE: ADAPTIVE SKY ---------- */
-.sky-sig{padding:100px 6vw;background:var(--night-1);color:#fff;position:relative;overflow:hidden}
-.sky-sig .wrap{max-width:1180px}
-.sky-sig .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8fe0ff;margin-bottom:16px;display:block}
-.sky-sig h2{font-family:var(--disp);font-size:clamp(26px,3vw,38px);font-weight:600;letter-spacing:-.02em;max-width:600px;margin-bottom:14px}
-.sky-sig p{color:#cbd6ea;max-width:520px;font-size:16px;line-height:1.6;margin-bottom:56px}
-.sky-track{position:relative;height:120px;border-radius:20px;overflow:hidden;
-  background:linear-gradient(90deg,#0a1a3a 0%,#1c3d78 12%,#33b9f2 32%,#bfe9ff 50%,#ffd98a 68%,#ff8a5c 82%,#1c2a52 94%,#0a1a3a 100%)}
-.sky-track .grain{position:absolute;inset:0;background:repeating-linear-gradient(90deg,#0000,#0000 2px,#ffffff08 3px)}
-.sky-marker{position:absolute;top:50%;width:30px;height:30px;margin-top:-15px;margin-left:-15px;border-radius:50%;
-  background:#fff;box-shadow:0 0 0 6px #ffffff30,0 8px 20px #00000040;animation:travel 14s linear infinite}
-@keyframes travel{0%{left:2%}100%{left:98%}}
-.sky-ticks{display:flex;justify-content:space-between;margin-top:16px;font-family:var(--mono);font-size:12px;color:#7f8db3}
-
-/* ---------- SCREENS GALLERY ---------- */
-.gallery{padding:110px 6vw}
-.gallery .section-head{margin-bottom:56px}
-.shots{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
-.shot-card{text-align:center}
-.shot-label{font-family:var(--disp);font-weight:600;font-size:15px;margin-top:18px}
-.shot-sub{font-size:13px;color:var(--ink-3);margin-top:3px}
-.mini-phone{width:100%;aspect-ratio:290/592;border-radius:32px;background:#0c1220;padding:9px;box-shadow:0 26px 50px -20px #12203640;margin:0 auto;max-width:250px}
-.mini-screen{width:100%;height:100%;border-radius:24px;overflow:hidden;position:relative;font-family:var(--body)}
-
-/* Now screen recreation */
-.now-screen{background:linear-gradient(190deg,var(--sky-1),var(--sky-2) 55%,var(--sky-3))}
-.now-top{text-align:center;padding-top:26px}
-.now-city{font-size:11px;font-weight:600;color:var(--ink)}
-.now-temp{font-family:var(--mono);font-weight:600;font-size:44px;color:var(--ink);margin-top:6px;letter-spacing:-.02em}
-.now-cond{font-size:12px;color:var(--ink-2);margin-top:2px}
-.now-card{background:#ffffffee;margin:14px 12px 0;border-radius:16px;padding:12px}
-.now-hourly{display:flex;justify-content:space-between}
-.now-hourly div{text-align:center;font-family:var(--mono);font-size:9.5px;color:var(--ink-2)}
-.now-gauges{display:flex;gap:8px;margin:10px 12px 0}
-.gauge{flex:1;background:#ffffffee;border-radius:14px;padding:10px 6px;text-align:center}
-.gauge svg{margin:0 auto}
-.gauge .gv{font-family:var(--mono);font-weight:600;font-size:14px;color:var(--ink);margin-top:2px}
-.gauge .gl{font-size:8px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.03em}
-
-/* Radar screen recreation */
-.radar-screen{background:#0c1424}
-.radar-top{padding:14px 12px 8px;font-size:10.5px;color:#cbd6ea;font-weight:600}
-.radar-map{margin:0 12px;height:52%;border-radius:14px;background:
-  radial-gradient(circle at 50% 55%,#12203600,#12203600),
-  linear-gradient(#0a1220,#0a1220);position:relative;overflow:hidden;border:1px solid #ffffff14}
-.radar-map .grid-lines{position:absolute;inset:0;background-image:linear-gradient(#ffffff0c 1px,transparent 1px),linear-gradient(90deg,#ffffff0c 1px,transparent 1px);background-size:20px 20px}
-.radar-map .loc{position:absolute;top:50%;left:50%;width:10px;height:10px;border-radius:50%;background:#33b9f2;box-shadow:0 0 0 5px #33b9f235;margin:-5px}
-.radar-bar{margin:12px 12px 0;height:5px;border-radius:3px;background:#ffffff1c;position:relative}
-.radar-bar::after{content:"";position:absolute;left:0;top:0;bottom:0;width:44%;background:linear-gradient(90deg,#33b9f2,#8fe0ff);border-radius:3px}
-.radar-labels{display:flex;justify-content:space-between;margin:8px 12px 0;font-family:var(--mono);font-size:8.5px;color:#7f8db3}
-.radar-note{margin:12px 12px 0;background:#ffffff10;border-radius:12px;padding:9px 11px;font-size:9.5px;color:#cbd6ea}
-
-/* Explore screen recreation */
-.exp-screen{background:linear-gradient(190deg,var(--sky-2),var(--cream) 60%)}
-.exp-top{padding:14px 14px 4px;font-size:10.5px;font-weight:600;color:var(--ink)}
-.exp-rows{margin:6px 10px 0;display:flex;flex-direction:column;gap:5px}
-.exp-label{font-family:var(--mono);font-size:8px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);margin:8px 4px 2px}
-.exp-row{background:#ffffffee;border-radius:11px;padding:8px 10px;display:flex;justify-content:space-between;align-items:center}
-.exp-row .t{font-size:10px;font-weight:600;color:var(--ink)}
-.exp-row .v{font-family:var(--mono);font-size:9px;color:var(--ink-2);text-align:right}
-
-/* ---------- CTA ---------- */
+/* CTA */
 .cta{padding:110px 6vw;text-align:center;background:linear-gradient(190deg,#0c1424,#0a1a3a 50%,#12345f);color:#fff;position:relative;overflow:hidden}
 .cta::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:#33b9f230;filter:blur(120px);top:-200px;right:-100px}
 .cta h2{font-family:var(--disp);font-size:clamp(30px,4vw,46px);font-weight:700;letter-spacing:-.02em;margin-bottom:16px;position:relative}
@@ -222,26 +94,22 @@ h1 em{font-style:normal;background:linear-gradient(100deg,var(--blue) 10%,#22b8c
 .cta .store-badge.outline{border-color:#ffffff40;color:#fff}
 .cta .store-badge.outline:hover{border-color:#fff}
 
-/* ---------- FOOTER ---------- */
-footer{padding:44px 6vw;text-align:center;color:var(--ink-3);font-size:12.5px;line-height:1.7;background:var(--paper);border-top:1px solid var(--line)}
+/* FOOTER */
+footer{padding:40px 6vw;text-align:center;color:var(--ink-3);font-size:12.5px;line-height:1.7;background:var(--paper);border-top:1px solid var(--line)}
 footer strong{color:var(--ink-2)}
 
-@media(max-width:980px){
+@media(max-width:900px){
   .hero-grid{grid-template-columns:1fr;text-align:center}
   .hero-sub{margin:0 auto}
-  .hero-btns,.hero-trust{justify-content:center}
+  .hero-btns{justify-content:center}
   .phone-stage{margin-top:40px}
   .grid{grid-template-columns:1fr 1fr}
-  .explore-grid{grid-template-columns:1fr}
-  .shots{grid-template-columns:1fr}
-  .shot-card{max-width:280px;margin:0 auto}
 }
 @media(max-width:600px){
   .grid{grid-template-columns:1fr}
-  .section-head{flex-direction:column;align-items:flex-start}
 }
 @media(prefers-reduced-motion:reduce){
-  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
 }
 </style>
 </head>
@@ -249,12 +117,6 @@ footer strong{color:var(--ink-2)}
 
 <nav>
   <a class="brand" href="#top"><span class="brand-mark"></span>Metcastify</a>
-  <div class="nav-links">
-    <a href="#ask">Ask</a>
-    <a href="#radar">Radar</a>
-    <a href="#explore">Explore</a>
-    <a href="#screens">Screens</a>
-  </div>
   <a class="nav-cta" href="#cta">Get notified</a>
 </nav>
 
@@ -263,7 +125,7 @@ footer strong{color:var(--ink-2)}
     <div>
       <span class="eyebrow"><span class="eyebrow-dot"></span>iOS &amp; Android · Coming soon</span>
       <h1>Weather that<br><em>explains itself.</em></h1>
-      <p class="hero-sub">Most apps hand you a wall of numbers and let you figure out what they mean. Metcastify just tells you: when the rain actually starts, whether tonight's clear enough for stars, and if you'll want sunscreen before noon.</p>
+      <p class="hero-sub">Most apps give you numbers. Metcastify gives you answers — when the rain starts, whether tonight's clear for stars, if you'll need sunscreen before noon.</p>
       <div class="hero-btns">
         <a class="store-badge dark" href="#cta">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M16.5 3.5c0 1.1-.9 2.4-1.9 3.2-.9.7-2.2 1.2-3.2 1.1-.1-1.1.4-2.3 1.3-3.1.9-.8 2.4-1.4 3.6-1.4.1.1.2.1.2.2zM20.5 17.2c-.5 1.2-.8 1.7-1.5 2.8-1 1.5-2.3 3.4-4 3.4-1.5 0-1.9-1-3.9-1s-2.5.9-3.9 1c-1.6.1-2.9-1.7-3.9-3.2-2.1-3.1-3.7-8.7-1.5-12.6 1.1-1.9 3-3.2 5.1-3.2 1.6 0 2.9 1.1 3.9 1.1 1 0 2.6-1.3 4.4-1.1.8.1 2.9.3 4.3 2.4-.1.1-2.6 1.5-2.5 4.5.1 3.5 3.1 4.7 3.1 4.7z" fill="#fff"/></svg>
@@ -274,14 +136,7 @@ footer strong{color:var(--ink-2)}
           <span class="st"><small>Coming to</small><strong>Google Play</strong></span>
         </a>
       </div>
-      <div class="hero-trust">
-        <span>Real forecast data, not guesses:</span>
-      </div>
-      <div class="trust-sources">
-        <span>NWS</span><span>Open-Meteo</span><span>MET Norway</span><span>ECMWF IFS</span>
-      </div>
     </div>
-
     <div class="phone-stage">
       <div class="phone">
         <div class="screen">
@@ -296,179 +151,53 @@ footer strong{color:var(--ink-2)}
   </div>
 </section>
 
-<section class="source-strip">
-  <div class="wrap">
-    <span class="label">Radar sourced from</span>
-    <span class="chip">LibreWXR</span><span class="chip">·</span>
-    <span class="chip">MRMS</span><span class="chip">·</span>
-    <span class="chip">OPERA</span><span class="chip">·</span>
-    <span class="chip">ECMWF IFS</span>
-  </div>
-</section>
-
-<section class="why">
-  <div class="wrap">
-    <h2>Every other weather app assumes you'll do the interpreting. Metcastify does it for you.</h2>
-    <p>The forecast underneath is the same official data everyone else uses. What's different is that you can just ask it a question — in your own words — and get a straight, specific answer.</p>
-  </div>
-</section>
-
 <section class="features">
-  <div class="section-head">
-    <h2>Built around one idea</h2>
-    <p>Six ways Metcastify turns raw weather data into something you'd actually want to open.</p>
+  <div class="features-head">
+    <h2>Six ways it's different</h2>
+    <p>Same official data everyone else uses. What's different is you can ask it a question — in your own words — and get a straight answer.</p>
   </div>
   <div class="grid">
-    <div class="card" id="ask">
+    <div class="card">
       <div class="card-icon ic-1">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H8l-4 4V5z" stroke="#2f6fe4" stroke-width="1.8" stroke-linejoin="round"/></svg>
       </div>
       <h3>Ask Metcastify</h3>
-      <p>"Good stargazing tonight?" "Best time for a walk?" Type any question in plain English and get a specific, local answer — not a spreadsheet.</p>
+      <p>"Good stargazing tonight?" "Best time for a walk?" Type any question and get a specific, local answer — not a spreadsheet.</p>
     </div>
-    <div class="card" id="radar">
+    <div class="card">
       <div class="card-icon ic-2">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2" fill="#22b8cf"/><path d="M12 8a4 4 0 0 1 0 8M12 4a8 8 0 0 1 0 16" stroke="#22b8cf" stroke-width="1.8" stroke-linecap="round"/></svg>
       </div>
       <h3>Live, layered radar</h3>
-      <p>Track precipitation with radar drawn from four independent sources, plus a minute-by-minute outlook for the next two hours, right where you stand.</p>
+      <p>Precipitation from four independent sources, plus a minute-by-minute outlook for the next two hours.</p>
     </div>
     <div class="card">
       <div class="card-icon ic-3">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="7.5" stroke="#ff8a3d" stroke-width="1.8"/><path d="M12 8v4l3 2" stroke="#ff8a3d" stroke-width="1.8" stroke-linecap="round"/></svg>
       </div>
       <h3>Conditions at a glance</h3>
-      <p>UV, wind, humidity, and air quality shown as simple gauges — read in a second, not something you have to look up what "56%" means.</p>
+      <p>UV, wind, humidity, air quality as simple gauges — read in a second, not something you decode.</p>
     </div>
     <div class="card">
       <div class="card-icon ic-4">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="7" height="7" rx="1.5" stroke="#7c5cff" stroke-width="1.8"/><rect x="13" y="4" width="7" height="7" rx="1.5" stroke="#7c5cff" stroke-width="1.8"/><rect x="4" y="13" width="7" height="7" rx="1.5" stroke="#7c5cff" stroke-width="1.8"/><rect x="13" y="13" width="7" height="7" rx="1.5" stroke="#7c5cff" stroke-width="1.8"/></svg>
       </div>
-      <h3>An Explore hub</h3>
-      <p>Outdoor Planner finds your best window outside. Photography tracks golden hour. Gardening warns you before frost. Astronomy tracks the moon. All in one tab.</p>
+      <h3>Explore hub</h3>
+      <p>Outdoor Planner, golden hour, frost warnings, moon phase — every reason you check the weather, one tab.</p>
     </div>
-    <div class="card" id="explore">
+    <div class="card">
       <div class="card-icon ic-5">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 4v3M12 17v3M4 12h3M17 12h3" stroke="#e6a93d" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="4.5" stroke="#e6a93d" stroke-width="1.8"/></svg>
       </div>
-      <h3>A sky that shifts with the day</h3>
-      <p>The interface itself moves through sunrise, midday, and sunset color — so a glance at your homescreen tells you the time of day as much as the weather.</p>
+      <h3>Sky that shifts with the day</h3>
+      <p>The interface moves through sunrise, midday, and sunset — a glance tells you the time as much as the weather.</p>
     </div>
     <div class="card">
       <div class="card-icon ic-6">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 17l4-6 4 3 5-8" stroke="#122036" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 6h3v3" stroke="#122036" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
       <h3>Sourced, not synthesized</h3>
-      <p>Every number traces back to the National Weather Service, Open-Meteo, or MET Norway. The AI only explains what's already there — it never invents a forecast.</p>
-    </div>
-  </div>
-</section>
-
-<section class="explore-sec">
-  <div class="explore-grid">
-    <div class="explore-copy">
-      <span class="kicker">The Explore tab</span>
-      <h2>Every reason you check the weather, in one place.</h2>
-      <p>Not just "will it rain." Metcastify groups the questions people actually have — when to go outside, whether it's safe for the garden, what the sky will look like tonight — into one scrollable hub.</p>
-      <ul class="explore-list">
-        <li><span class="dot"></span><span><strong>Plan</strong> — Outdoor Planner, Photography's golden hour, and Travel Mode for comparing saved places.</span></li>
-        <li><span class="dot"></span><span><strong>Conditions</strong> — Health flags high UV before you head out; Gardening tracks frost risk.</span></li>
-        <li><span class="dot"></span><span><strong>Discover</strong> — Moon phase, 10-day climate range, and a running log of weather milestones.</span></li>
-      </ul>
-    </div>
-    <div class="explore-panel">
-      <div class="ep-group-label">Plan</div>
-      <div class="ep-row">
-        <div class="ep-left"><div class="ep-ic" style="background:#22b8cf1a"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-9 4 5 3-4 3 8H4z" stroke="#22b8cf" stroke-width="1.8" stroke-linejoin="round"/></svg></div><div class="ep-title">Outdoor Planner</div></div>
-        <div class="ep-right"><small>Best window</small><strong>6–8 AM</strong></div>
-      </div>
-      <div class="ep-row">
-        <div class="ep-left"><div class="ep-ic" style="background:#ff8a3d1a"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="2" stroke="#ff8a3d" stroke-width="1.8"/><circle cx="12" cy="13" r="3" stroke="#ff8a3d" stroke-width="1.8"/></svg></div><div class="ep-title">Photography</div></div>
-        <div class="ep-right"><small>Golden hour</small><strong>8:04 PM</strong></div>
-      </div>
-      <div class="ep-group-label">Conditions</div>
-      <div class="ep-row">
-        <div class="ep-left"><div class="ep-ic" style="background:#ff5c7a1a"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.5-7-10a4.5 4.5 0 0 1 7-3.7A4.5 4.5 0 0 1 19 10c0 5.5-7 10-7 10z" stroke="#ff5c7a" stroke-width="1.8"/></svg></div><div class="ep-title">Health</div></div>
-        <div class="ep-right"><small>UV index</small><strong>9 · Very High</strong></div>
-      </div>
-      <div class="ep-group-label">Discover</div>
-      <div class="ep-row">
-        <div class="ep-left"><div class="ep-ic" style="background:#7c5cff1a"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M15 5a7 7 0 1 0 4 12.7A7 7 0 0 1 15 5z" fill="#7c5cff"/></svg></div><div class="ep-title">Astronomy</div></div>
-        <div class="ep-right"><small>Waning Crescent</small><strong>1% lit</strong></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sky-sig">
-  <div class="wrap">
-    <span class="kicker">Adaptive theme</span>
-    <h2>The app doesn't just report the sky. It looks like it.</h2>
-    <p>As real sunrise and sunset pass, the background shifts through the same colors the sky's actually showing outside your window — a quiet detail most weather apps skip.</p>
-    <div class="sky-track"><div class="grain"></div><div class="sky-marker"></div></div>
-    <div class="sky-ticks"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>12 AM</span></div>
-  </div>
-</section>
-
-<section class="gallery" id="screens">
-  <div class="section-head">
-    <h2>Take a look inside</h2>
-    <p>Three tabs, three jobs: know what it's doing now, watch what's coming, and plan around it.</p>
-  </div>
-  <div class="shots">
-    <div class="shot-card">
-      <div class="mini-phone"><div class="mini-screen now-screen">
-        <div class="now-top"><div class="now-city">Norfolk, Nebraska</div><div class="now-temp">84°</div><div class="now-cond">Clear · Feels like 87°</div></div>
-        <div class="now-card">
-          <div class="now-hourly">
-            <div>Now<br>83°</div><div>1PM<br>85°</div><div>2PM<br>87°</div><div>3PM<br>88°</div><div>4PM<br>89°</div>
-          </div>
-        </div>
-        <div class="now-gauges">
-          <div class="gauge">
-            <svg width="42" height="42" viewBox="0 0 42 42"><circle cx="21" cy="21" r="16" stroke="#e6ecf5" stroke-width="4" fill="none"/><circle cx="21" cy="21" r="16" stroke="#ff8a3d" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="18" transform="rotate(-90 21 21)"/></svg>
-            <div class="gv">9</div><div class="gl">UV</div>
-          </div>
-          <div class="gauge">
-            <svg width="42" height="42" viewBox="0 0 42 42"><circle cx="21" cy="21" r="16" stroke="#e6ecf5" stroke-width="4" fill="none"/><circle cx="21" cy="21" r="16" stroke="#2f6fe4" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="60" transform="rotate(-90 21 21)"/></svg>
-            <div class="gv">9</div><div class="gl">Wind</div>
-          </div>
-          <div class="gauge">
-            <svg width="42" height="42" viewBox="0 0 42 42"><circle cx="21" cy="21" r="16" stroke="#e6ecf5" stroke-width="4" fill="none"/><circle cx="21" cy="21" r="16" stroke="#22b8cf" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="45" transform="rotate(-90 21 21)"/></svg>
-            <div class="gv">56</div><div class="gl">Humid</div>
-          </div>
-        </div>
-      </div></div>
-      <div class="shot-label">Now</div>
-      <div class="shot-sub">Current conditions, hourly, and gauges — no scrolling required</div>
-    </div>
-
-    <div class="shot-card">
-      <div class="mini-phone"><div class="mini-screen radar-screen">
-        <div class="radar-top">Quiet radar nearby — no precipitation expected</div>
-        <div class="radar-map"><div class="grid-lines"></div><div class="loc"></div></div>
-        <div class="radar-bar"></div>
-        <div class="radar-labels"><span>Now</span><span>+30m</span><span>+60m</span><span>+90m</span><span>+120m</span></div>
-        <div class="radar-note">Sourced from LibreWXR · MRMS · OPERA · ECMWF IFS</div>
-      </div></div>
-      <div class="shot-label">Radar</div>
-      <div class="shot-sub">Playback timeline with a real two-hour precipitation outlook</div>
-    </div>
-
-    <div class="shot-card">
-      <div class="mini-phone"><div class="mini-screen exp-screen">
-        <div class="exp-top">Explore</div>
-        <div class="exp-rows">
-          <div class="exp-label">Plan</div>
-          <div class="exp-row"><div class="t">Outdoor Planner</div><div class="v">Best window<br>6–8 AM</div></div>
-          <div class="exp-row"><div class="t">Photography</div><div class="v">Golden hour<br>8:04 PM</div></div>
-          <div class="exp-label">Discover</div>
-          <div class="exp-row"><div class="t">Astronomy</div><div class="v">Waning Crescent<br>1% lit</div></div>
-          <div class="exp-row"><div class="t">Fun &amp; Stats</div><div class="v">Achievements<br>0 / 12</div></div>
-        </div>
-      </div></div>
-      <div class="shot-label">Explore</div>
-      <div class="shot-sub">Every reason to check the weather, grouped into one hub</div>
+      <p>Every number traces back to NWS, Open-Meteo, or MET Norway. The app explains what's there — it never invents a forecast.</p>
     </div>
   </div>
 </section>
@@ -476,7 +205,7 @@ footer strong{color:var(--ink-2)}
 <section class="cta" id="cta">
   <div class="wrap">
     <h2>Be the first to try it.</h2>
-    <p>Metcastify is finishing up before launch on iPhone and Android. Leave your email and we'll let you know the moment the beta opens.</p>
+    <p>Metcastify is launching on iPhone and Android. Leave your email and we'll let you know the moment the beta opens.</p>
     <div class="hero-btns">
       <a class="store-badge dark" href="#">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M16.5 3.5c0 1.1-.9 2.4-1.9 3.2-.9.7-2.2 1.2-3.2 1.1-.1-1.1.4-2.3 1.3-3.1.9-.8 2.4-1.4 3.6-1.4.1.1.2.1.2.2zM20.5 17.2c-.5 1.2-.8 1.7-1.5 2.8-1 1.5-2.3 3.4-4 3.4-1.5 0-1.9-1-3.9-1s-2.5.9-3.9 1c-1.6.1-2.9-1.7-3.9-3.2-2.1-3.1-3.7-8.7-1.5-12.6 1.1-1.9 3-3.2 5.1-3.2 1.6 0 2.9 1.1 3.9 1.1 1 0 2.6-1.3 4.4-1.1.8.1 2.9.3 4.3 2.4-.1.1-2.6 1.5-2.5 4.5.1 3.5 3.1 4.7 3.1 4.7z" fill="#fff"/></svg>
@@ -491,51 +220,38 @@ footer strong{color:var(--ink-2)}
 </section>
 
 <footer>
-  © 2026 Metcastify — <strong>Weather data</strong> from the National Weather Service, Open-Meteo, and MET Norway.<br>
+  © 2026 Metcastify — <strong>Weather data</strong> from NWS, Open-Meteo, and MET Norway.<br>
   <strong>Radar</strong> sourced from LibreWXR, MRMS, OPERA, and ECMWF IFS.
 </footer>
 
 <script>
-// Typing / chat demo in the hero phone
-const exchanges = [
-  {q:"Is tomorrow cooler than today?", a:"Yes — tomorrow looks a touch cooler, with a high near 90° versus today's 89°. Both days stay dry and clear."},
-  {q:"Do I need sunscreen?", a:"UV is 9 right now and climbing to 10 by 1 PM. Worth it if you're out more than twenty minutes."},
-  {q:"Good stargazing tonight?", a:"Clear skies and a waning crescent moon at 1% — close to ideal conditions for stargazing."}
+const exchanges=[
+  {q:"Is tomorrow cooler than today?",a:"Yes — tomorrow peaks near 90° versus today's 89°. Both days stay dry and clear."},
+  {q:"Do I need sunscreen?",a:"UV is 9 right now, climbing to 10 by 1 PM. Worth it if you're out more than twenty minutes."},
+  {q:"Good stargazing tonight?",a:"Clear skies and a waning crescent at 1% — close to ideal for stargazing."}
 ];
-const askBody = document.getElementById('askBody');
-let ei = 0;
-
-function wait(ms){ return new Promise(r=>setTimeout(r,ms)); }
-
-function addBubble(cls, text){
-  const el = document.createElement('div');
-  el.className = 'bubble ' + cls;
-  el.textContent = text;
+const askBody=document.getElementById('askBody');
+let ei=0;
+function wait(ms){return new Promise(r=>setTimeout(r,ms))}
+function addBubble(cls,text){
+  const el=document.createElement('div');
+  el.className='bubble '+cls;el.textContent=text;
   askBody.appendChild(el);
-  while(askBody.children.length > 4){ askBody.removeChild(askBody.firstChild); }
-  askBody.scrollTop = askBody.scrollHeight;
+  while(askBody.children.length>4)askBody.removeChild(askBody.firstChild);
+  askBody.scrollTop=askBody.scrollHeight;
   return el;
 }
-
 async function runDemo(){
   while(true){
-    const {q,a} = exchanges[ei % exchanges.length];
-    ei++;
-    addBubble('user', q);
-    await wait(700);
-    const dots = document.createElement('div');
-    dots.className = 'typing-dots';
-    dots.innerHTML = '<span></span><span></span><span></span>';
-    askBody.appendChild(dots);
-    askBody.scrollTop = askBody.scrollHeight;
-    await wait(1300);
-    dots.remove();
-    addBubble('ai', a);
-    await wait(3600);
+    const{q,a}=exchanges[ei%exchanges.length];ei++;
+    addBubble('user',q);await wait(700);
+    const dots=document.createElement('div');dots.className='typing-dots';
+    dots.innerHTML='<span></span><span></span><span></span>';
+    askBody.appendChild(dots);askBody.scrollTop=askBody.scrollHeight;
+    await wait(1300);dots.remove();addBubble('ai',a);await wait(3600);
   }
 }
 runDemo();
 </script>
-
 </body>
 </html>
